@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    </head>
+    <body>
+        <script>
+            var a = {}
+            console.log(1)
+            console.log(1)
+            console.log(2)
+
+            var b = new Boolean(false)
+            function test(val) {
+                return val ? console.log("true") : console.log("false")
+            }
+            console.log(a,Boolean(a),b)
+            test(b)
+            let i = 0;
+            function re () {
+                i++
+                re()
+            }
+            try {
+                // re()
+            } catch (ex) {
+                console.log("i=",i,"error",ex)
+            }
+
+            function fac (n) {
+                console.trace()
+                if (n == 1 || n == 0) {
+                    return 1
+                } 
+                return n * fac(n - 1)
+            }
+            console.log(fac(3))
+        </script>
+    </body>
+</html>
